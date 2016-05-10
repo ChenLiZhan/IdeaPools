@@ -1,0 +1,18 @@
+{
+  "name": "jenny-research",
+  "version": "0.0.0",
+  "authors": [
+    "chenlizhan <chung1350@hotmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.5.5"
+  }
+}
