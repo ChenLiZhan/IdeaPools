@@ -1,4 +1,4 @@
-html, div, header, body, footer {
+html, div, header, body, footer, .header-container, .content-container, .footer-container {
   padding: 0;
   margin: 0;
 }
@@ -16,12 +16,13 @@ html, body, .main-container {
 }
 
 .content-container {
-  padding-top: 2em;
-  height: 85%;
+  /*padding: 1em;*/
+  height: 87%;
 }
 
 .footer-container {
   height: 3%;
+  padding: 1px;
 }
 
 a {
@@ -36,7 +37,10 @@ button {
   display: inline-block;
   text-decoration: none;
   padding: 15px 32px;
-  font-size: 3vh;
+  font-size: 1.5em;
   border-radius: 7px;
   cursor: pointer;
+  width: 200px;
+  height: 10%;
+  margin: 1%;
 }

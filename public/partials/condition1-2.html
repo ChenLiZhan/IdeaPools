@@ -1,0 +1,49 @@
+<style>
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .context {
+    width: 60%;
+  }
+
+  .container span {
+    font-size: 1.5em;
+  }
+
+  .input-textbox {
+    margin-top: 1em;
+    width: 60%;
+    height: 2.5em;
+    font-size: 1.5em;
+    border: none;
+    background-color: #dcdcdc;
+  }
+</style>
+<div class="container">
+  <div class="context">
+    <span>1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, veniam!</span>
+  </div>
+  <input type="text" class="input-textbox">
+  <br>
+  <div class="context">
+    <span>2. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, veniam!</span>
+  </div>
+  <input type="text" class="input-textbox">
+  <br>
+  <div class="context">
+    <span>3. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, veniam!</span>
+  </div>
+  <input type="text" class="input-textbox">
+  <br>
+  <div class="context">
+    <span>4. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, veniam!</span>
+  </div>
+  <input type="text" class="input-textbox">
+  <br>
+  <button ng-click="goThird()" style="margin-left: 52%;">SUBMIT</button>
+</div>
