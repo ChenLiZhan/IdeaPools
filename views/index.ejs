@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="UTF-8">
+  <title><%= title %></title>
+  <base href="/">
+</head>
+<body ng-controller="AppCtrl">
+  <% include partials/header.ejs %>
+  
+  <div ui-view></div>
+
+  <% include partials/footer.ejs %>
+
+  <!-- Library -->
+  <script src="/components/angular/angular.js"></script>
+  <script src="/components/angular-ui-router/release/angular-ui-router.js"></script>
+
+  <!-- Customize -->
+  <script src="/javascripts/app.js"></script>
+  <script src="/javascripts/controller.js"></script>
+</body>
+</html>
