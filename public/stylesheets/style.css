@@ -1,8 +1,42 @@
-body {
-  padding: 50px;
+html, div, header, body, footer {
+  padding: 0;
+  margin: 0;
+}
+
+html, div, body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+html, body, .main-container {
+  height: 100%;
+}
+
+.header-container {
+  height: 10%;
+}
+
+.content-container {
+  padding-top: 2em;
+  height: 85%;
+}
+
+.footer-container {
+  height: 3%;
 }
 
 a {
   color: #00B7FF;
+}
+
+button {
+  background-color: #008CBA;
+  border: none;
+  color: white;
+  text-align: center;
+  display: inline-block;
+  text-decoration: none;
+  padding: 15px 32px;
+  font-size: 3vh;
+  border-radius: 7px;
+  cursor: pointer;
 }

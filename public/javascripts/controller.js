@@ -16,9 +16,13 @@ function Index($rootScope, $scope) {
 
 Index.$inject = ['$rootScope', '$scope'];
 
-function Condition1($rootScope, $scope) {}
+function Condition1($rootScope, $scope, $location) {
+  $scope.start = function() {
+    $location.path('/condition1/1');
+  }
+}
 
-Condition1.$inject = ['$rootScope', '$scope'];
+Condition1.$inject = ['$rootScope', '$scope', '$location'];
 
 function Condition2($rootScope, $scope) {}
 

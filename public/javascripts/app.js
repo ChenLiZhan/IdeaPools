@@ -14,6 +14,11 @@ app.config(['$stateProvider', '$urlRouterProvider', '$controllerProvider', '$loc
       templateUrl: 'partials/condition1.html',
       controller: 'Condition1'
     })
+    .state('condition1-1', {
+      url: '/condition1/1',
+      templateUrl: 'partials/condition1-1.html',
+      controller: 'Condition1'
+    })
     .state('condition2', {
       url: '/condition2',
       templateUrl: 'partials/condition2.html',
