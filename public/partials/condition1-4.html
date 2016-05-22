@@ -7,28 +7,25 @@
     height: 100%;
   }
 
-  .context {
-    width: 60%;
-  }
-
-  .container p {
-    font-size: 1.5em;
-  }
-
   .input-textarea {
-    /*margin-bottom: 0.5px;*/
-    width: 60%;
-    height: 50%;
-    font-size: 1.5em;
-    background-color: #dcdcdc;
+    height: 150px;
   }
 </style>
 <div class="container">
   <div class="context">
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam.
+      In the space provided, please enter any new idea that you think of.
     </p>
+    <p>
+      <ul>
+        <li>Please do not enter more than one idea in the box at a time. When you want to submit next idea, press “submit idea” first</li>
+        <li>As soon as you type the first character, the stopwatch is started. It will stop after 10 minutes and go to the next page.</li>
+        <li>Your ideas will be presented below the box.</li>
+        <li>Your ideas are anonymous.</li>
+      </ul>
+    </p>
+    <p class="topic">Topic: How a future supermarket may be like? What elements it may have?<span class="emphasize-text" style="float: right;">10:00</span></p>
   </div>
   <textarea class="input-textarea" name="" id="" autofocus></textarea>
-  <button ng-click="goFinal()" style="margin-left: 52%;">SUBMIT</button>
+  <button ng-click="goFinal()" style="margin-left: 48%;">SUBMIT IDEA</button>
 </div>

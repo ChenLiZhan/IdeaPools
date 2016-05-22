@@ -7,22 +7,30 @@ html, div, body {
   font: 14px "Calibri", Helvetica, Arial, sans-serif;
 }
 
-html, body, .main-container {
+html, body {
   height: 100%;
 }
 
+.main-container {
+  min-height: 100%;
+  position: relative;
+}
+
 .header-container {
-  height: 10%;
+  height: 6.5vh;
 }
 
 .content-container {
-  /*padding: 1em;*/
-  height: 87%;
+  height: 100%;
+  padding-bottom: 30px;
 }
 
 .footer-container {
-  height: 3%;
+  height: 30px;
   padding: 0px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 a {
@@ -36,12 +44,59 @@ button {
   text-align: center;
   display: inline-block;
   text-decoration: none;
-  padding: 15px 32px;
-  font-size: 1.5em;
+  padding: 3px 32px;
+  font-size: 2.7vh;
   border-radius: 7px;
   cursor: pointer;
-  width: 200px;
-  height: 7%;
+  width: 25vh;
+  height: 57px;
   margin: 1%;
   font-family: 'Calibri';
+}
+
+.emphasize-text {
+  color: #FF9933;
+}
+
+.context .topic {
+  font-weight: bolder;
+  font-size: 2.7vh;
+}
+
+.container {
+  margin-top: 7vh;
+}
+
+.context, .context-big {
+  width: 60%;
+  font-family: 'Calibri';
+  color: #758698;
+  font-size: 2.5vh;
+  margin-bottom: 20px;
+}
+
+.context {
+  line-height: 30px;
+  text-align: justify;
+}
+
+.input-textarea {
+  width: 60%;
+  height: 350px;
+  font-size: 2.6vh;
+  background-color: #F4F4F4;
+  border-color: #758698;
+  font-family: 'Open Sans';
+  color: #000;
+  padding: 10px;
+}
+
+.input-textbox {
+  margin-top: 1em;
+  width: 60%;
+  height: 2.5em;
+  font-size: 1.6em;
+  background-color: #F4F4F4;
+  border-color: #758698;
+  font-family: 'Open Sans';
 }

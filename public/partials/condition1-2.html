@@ -7,43 +7,31 @@
     height: 100%;
   }
 
-  .context {
-    width: 60%;
+  div.context {
+    margin: 7px;
   }
 
-  .container span {
-    font-size: 1.5em;
-  }
-
-  .input-textbox {
-    margin-top: 1em;
-    width: 60%;
-    height: 2.5em;
-    font-size: 1.5em;
-    border: none;
-    background-color: #dcdcdc;
+  .input-textarea {
+    height: 150px;
   }
 </style>
 <div class="container">
   <div class="context">
+    <p>In this part, please use a maximum of 200 words to answer each single question.</p>
     <span>1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, veniam!</span>
   </div>
-  <input type="text" class="input-textbox">
-  <br>
+  <textarea class="input-textarea" name="" id="" autofocus></textarea>
   <div class="context">
     <span>2. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, veniam!</span>
   </div>
-  <input type="text" class="input-textbox">
-  <br>
+  <textarea class="input-textarea" name="" id=""></textarea>
   <div class="context">
     <span>3. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, veniam!</span>
   </div>
-  <input type="text" class="input-textbox">
-  <br>
+  <textarea class="input-textarea" name="" id=""></textarea>
   <div class="context">
     <span>4. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, veniam!</span>
   </div>
-  <input type="text" class="input-textbox">
-  <br>
-  <button ng-click="goThird()" style="margin-left: 52%;">SUBMIT</button>
+  <textarea class="input-textarea" name="" id=""></textarea>
+  <button ng-click="goThird()">SUBMIT</button>
 </div>
