@@ -2,11 +2,56 @@
   nav {
     background-color: black;
     color: white;
-    font-size: 5vh;
-    padding: 0.5em;
+    padding-left: 1em;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    font-size: 2.5vh;
+  }
+
+  .logo {
+    font-family: "Montserrat Alternates";
+    font-weight: bolder;
+    font-size: 4.5vh;
+  }
+
+  span.first-title {
+    color: #FF9933;
+  }
+
+  span.second-title {
+    color: #1AADC3;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+  }
+
+  nav ul a {
+    color: #D0D0D0;
+    text-decoration: none;
+  }
+
+  nav li {
+    display: inline-block;
+    margin: 15px;
+    font-size: 3vh;
   }
 </style>
 
-<header>
-  <nav>Jenny's Expeirment</nav>
+<header style="height: 100%;">
+  <nav>
+    <div class="logo"><span class="first-title">Idea</span><span class="second-title">Pool</span></div>
+    <ul>
+      <a href="#"><li>FREE TO SHARE</li></a>
+      <a href="#"><li>GET FEEDBACK</li></a>
+      <a href="#"><li>VOTE</li></a>
+      <a href="#"><li>REFINE AND PROTOTYPE</li></a>
+      <a href="#"><li>IMPACT</li></a>
+    </ul>
+  </nav>
+
 </header>

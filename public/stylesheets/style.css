@@ -4,7 +4,7 @@ html, div, header, body, footer, .header-container, .content-container, .footer-
 }
 
 html, div, body {
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px "Calibri", Helvetica, Arial, sans-serif;
 }
 
 html, body, .main-container {
@@ -22,7 +22,7 @@ html, body, .main-container {
 
 .footer-container {
   height: 3%;
-  padding: 1px;
+  padding: 0px;
 }
 
 a {
@@ -30,9 +30,9 @@ a {
 }
 
 button {
-  background-color: #008CBA;
+  background-color: #1AADC3;
   border: none;
-  color: white;
+  color: #FFFFFF;
   text-align: center;
   display: inline-block;
   text-decoration: none;
@@ -41,6 +41,7 @@ button {
   border-radius: 7px;
   cursor: pointer;
   width: 200px;
-  height: 10%;
+  height: 7%;
   margin: 1%;
+  font-family: 'Calibri';
 }
