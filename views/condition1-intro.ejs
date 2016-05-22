@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="myApp">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title><%= title %></title>
@@ -8,56 +8,55 @@
   <link href='https://fonts.googleapis.com/css?family=Montserrat+Alternates:400,700|Open+Sans:400,700' rel='stylesheet' type='text/css'>
   <base href="/">
 </head>
-<body ng-controller="AppCtrl">
+<body>
+<style>
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  margin-top: 0;
+  padding-top: 7vh;
+}
+
+.main-container {
+  min-height: 100%;
+  position: relative;
+}
+
+footer {
+  color: #000;
+  text-align: center;
+  padding: 8px;
+}
+</style>
   <div class="main-container">
-
-     <style>
-      .container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        height: 97%;
-      }
-
-      .context {
-        width: 60%;
-      }
-
-      .container p {
-        font-size: 1.5em;
-      }
-
-      footer {
-        color: #000000;
-        text-align: center;
-        background-color: #FFF;
-        padding: 8px;
-        height: 3%;
-      }
-    </style>
-    <div class="container">
-      <div class="context">
-        <p>
-          Dear participants:
-        </p>
-        <p>
-          Thank you for taking part in the experiment. I am a graduate student from Institute of Service Science, National Tsing Hua
-          University, Taiwan, and I am currently conducting a cognitive study. You will later be asked to participate in three different
-          and independent studies; two are autobiographical memory tasks, and one is a brainstorming task. All of the three studies
-          will be presented and done on a website. After that, you will be transferred to answer a short questionnaire as the last part.
-          The whole experiment might take approximately 20 to 30 minutes depending on the person.
-        </p>
-        <p>
-          To begin, please press the button below.
-        </p>
+    <div class="content-container">
+      <div class="container">
+        <div class="context">
+          <p>
+            Dear participants:
+          </p>
+          <p>
+            Thank you for taking part in the experiment. I am a graduate student from Institute of Service Science, National Tsing Hua
+            University, Taiwan, and I am currently conducting a cognitive study. You will later be asked to participate in three different
+            and independent studies; two are autobiographical memory tasks, and one is a brainstorming task. All of the three studies
+            will be presented and done on a website. After that, you will be transferred to answer a short questionnaire as the last part.
+            The whole experiment might take approximately 20 to 30 minutes depending on the person.
+          </p>
+          <p>
+            To begin, please press the button below.
+          </p>
+        </div>
+        <button onclick="javascript:location.href='/condition1'">START</button>
       </div>
-      <button onclick="javascript:location.href='/condition1'">START</button>
     </div>
-
-    <footer>
-      &copy;2016 CHENLIZHAN ALL RIGHTS RESERVED
-    </footer>
+    <div class="footer-container">
+      <footer>
+        &copy;2016 CHENLIZHAN ALL RIGHTS RESERVED
+      </footer>
+    </div>
   </div>
 </body>
 </html>
