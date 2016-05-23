@@ -48,7 +48,7 @@ function Condition1($rootScope, $scope, $location, $window) {
       alertify.error('reach word limitation');
       $scope.question1 = oldVal;
     }
-  })
+  });
 
   $scope.$watch('question2', function(newVal, oldVal) {
     var wordLimit = 200;
@@ -57,7 +57,7 @@ function Condition1($rootScope, $scope, $location, $window) {
       alertify.error('reach word limitation');
       $scope.question2 = oldVal;
     }
-  })
+  });
 
   $scope.$watch('question3', function(newVal, oldVal) {
     var wordLimit = 200;
@@ -66,7 +66,7 @@ function Condition1($rootScope, $scope, $location, $window) {
       alertify.error('reach word limitation');
       $scope.question3 = oldVal;
     }
-  })
+  });
 
   $scope.$watch('question4', function(newVal, oldVal) {
     var wordLimit = 200;
@@ -75,12 +75,16 @@ function Condition1($rootScope, $scope, $location, $window) {
       alertify.error('reach word limitation');
       $scope.question4 = oldVal;
     }
-  })
+  });
 
   $scope.ideaPools = [];
   $scope.submitIdea = function(idea) {
-    $scope.ideaPools.push(idea);
+    $scope.ideaPools.unshift(idea);
     $scope.idea = '';
+  };
+
+  $scope.timerStart = function() {
+    $scope.$broadcast('timer-start');
   };
 
   $scope.$on('timer-tick', function(event, data) {
@@ -90,7 +94,6 @@ function Condition1($rootScope, $scope, $location, $window) {
       var port = $location.port()
       $scope.$broadcast('timer-stop');
       $scope.timerRunning = false;
-      console.log(protocal + "://" + host + ':' + port + "/condition1/final");
       $window.location.href = protocal + "://" + host + ':' + port + "/condition1/final";
     }
   });
