@@ -40,6 +40,60 @@ function Condition1($rootScope, $scope, $location, $window) {
   $scope.goForm = function() {
     $window.location.href = 'http://google.com'
   };
+
+  $scope.$watch('question1', function(newVal, oldVal) {
+    var wordLimit = 200;
+    var s = newVal ? newVal.split(/\s+/) : 0; // it splits the text on space/tab/enter
+    if (s.length > wordLimit) {
+      alertify.error('reach word limitation');
+      $scope.question1 = oldVal;
+    }
+  })
+
+  $scope.$watch('question2', function(newVal, oldVal) {
+    var wordLimit = 200;
+    var s = newVal ? newVal.split(/\s+/) : 0; // it splits the text on space/tab/enter
+    if (s.length > wordLimit) {
+      alertify.error('reach word limitation');
+      $scope.question2 = oldVal;
+    }
+  })
+
+  $scope.$watch('question3', function(newVal, oldVal) {
+    var wordLimit = 200;
+    var s = newVal ? newVal.split(/\s+/) : 0; // it splits the text on space/tab/enter
+    if (s.length > wordLimit) {
+      alertify.error('reach word limitation');
+      $scope.question3 = oldVal;
+    }
+  })
+
+  $scope.$watch('question4', function(newVal, oldVal) {
+    var wordLimit = 200;
+    var s = newVal ? newVal.split(/\s+/) : 0; // it splits the text on space/tab/enter
+    if (s.length > wordLimit) {
+      alertify.error('reach word limitation');
+      $scope.question4 = oldVal;
+    }
+  })
+
+  $scope.ideaPools = [];
+  $scope.submitIdea = function(idea) {
+    $scope.ideaPools.push(idea);
+    $scope.idea = '';
+  };
+
+  $scope.$on('timer-tick', function(event, data) {
+    if (data.millis == 0) {
+      var host = $location.host();
+      var protocal = $location.protocol()
+      var port = $location.port()
+      $scope.$broadcast('timer-stop');
+      $scope.timerRunning = false;
+      console.log(protocal + "://" + host + ':' + port + "/condition1/final");
+      $window.location.href = protocal + "://" + host + ':' + port + "/condition1/final";
+    }
+  });
 }
 
 Condition1.$inject = ['$rootScope', '$scope', '$location', '$window'];

@@ -65,6 +65,8 @@ button {
 
 .container {
   margin-top: 7vh;
+  word-wrap: break-word;
+  
 }
 
 .context, .context-big {

@@ -1,4 +1,4 @@
-var app = angular.module('myApp', ['ui.router']);
+var app = angular.module('myApp', ['ui.router', 'timer']);
 
 app.config(['$stateProvider', '$urlRouterProvider', '$controllerProvider', '$locationProvider', function($stateProvider, $urlRouterProvider, $controllerProvider, $locationProvider) {
   $controllerProvider.allowGlobals();
