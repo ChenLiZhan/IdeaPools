@@ -45,7 +45,7 @@ function Condition1($rootScope, $scope, $location, $window) {
     var wordLimit = 200;
     var s = newVal ? newVal.split(/\s+/) : 0; // it splits the text on space/tab/enter
     if (s.length > wordLimit) {
-      alertify.error('reach word limitation');
+      alertify.error('Oops! You have exceeded the word limit.');
       $scope.question1 = oldVal;
     }
   });
@@ -54,7 +54,7 @@ function Condition1($rootScope, $scope, $location, $window) {
     var wordLimit = 200;
     var s = newVal ? newVal.split(/\s+/) : 0; // it splits the text on space/tab/enter
     if (s.length > wordLimit) {
-      alertify.error('reach word limitation');
+      alertify.error('Oops! You have exceeded the word limit.');
       $scope.question2 = oldVal;
     }
   });
@@ -63,7 +63,7 @@ function Condition1($rootScope, $scope, $location, $window) {
     var wordLimit = 200;
     var s = newVal ? newVal.split(/\s+/) : 0; // it splits the text on space/tab/enter
     if (s.length > wordLimit) {
-      alertify.error('reach word limitation');
+      alertify.error('Oops! You have exceeded the word limit.');
       $scope.question3 = oldVal;
     }
   });
@@ -72,7 +72,7 @@ function Condition1($rootScope, $scope, $location, $window) {
     var wordLimit = 200;
     var s = newVal ? newVal.split(/\s+/) : 0; // it splits the text on space/tab/enter
     if (s.length > wordLimit) {
-      alertify.error('reach word limitation');
+      alertify.error('Oops! You have exceeded the word limit.');
       $scope.question4 = oldVal;
     }
   });
