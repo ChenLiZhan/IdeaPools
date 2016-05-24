@@ -114,6 +114,7 @@ function Condition1($rootScope, $scope, $location, $window, $http, $stateParams)
   $scope.ideaPools = [];
   $scope.idea = '';
   $scope.submitIdea = function(idea) {
+    if ($scope.idea === '') return;
     $scope.ideaPools.unshift(idea);
     $scope.idea = '';
   };
