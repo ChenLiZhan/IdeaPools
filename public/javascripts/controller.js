@@ -17,11 +17,9 @@ function Index($rootScope, $scope) {
 Index.$inject = ['$rootScope', '$scope'];
 
 function Condition1($rootScope, $scope, $location, $window, $http, $stateParams) {
-  if ($stateParams.uid) {
+  if ($stateParams.uid && $location.path() === '/condition1/final') {
     $scope.uid = $stateParams.uid;
-  }
-
-  if (!$rootScope.uid) {
+  } else if (!$rootScope.uid) {
     $location.path('/condition1');
   }
 

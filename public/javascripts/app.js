@@ -1,7 +1,8 @@
-var app = angular.module('myApp', ['ui.router', 'timer']);
+var app = angular.module('myApp', ['ui.router', 'timer', 'angular-loading-bar']);
 
-app.config(['$stateProvider', '$urlRouterProvider', '$controllerProvider', '$locationProvider', function($stateProvider, $urlRouterProvider, $controllerProvider, $locationProvider) {
+app.config(['$stateProvider', '$urlRouterProvider', '$controllerProvider', '$locationProvider', 'cfpLoadingBarProvider', function($stateProvider, $urlRouterProvider, $controllerProvider, $locationProvider, cfpLoadingBarProvider) {
   $controllerProvider.allowGlobals();
+  cfpLoadingBarProvider.includeSpinner = false;
 
   $stateProvider
     .state('home', {
