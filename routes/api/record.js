@@ -93,7 +93,7 @@ exports.updateCreativeIGT = function(req, res) {
 
   getSheet(0, function(sheet) {
     sheet.getRows(function(err, rows) {
-      rows[number - 1].igt = answer.join('\n======\n');
+      rows[number - 1].igt = answer.join('===');
       rows[number - 1].save(function() {
         return res.json({
           success: true
