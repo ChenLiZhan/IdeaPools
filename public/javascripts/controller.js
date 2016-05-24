@@ -16,17 +16,53 @@ function Index($rootScope, $scope) {
 
 Index.$inject = ['$rootScope', '$scope'];
 
-function Condition1($rootScope, $scope, $location, $window) {
+function Condition1($rootScope, $scope, $location, $window, $http, $stateParams) {
+  if ($stateParams.uid) {
+    $scope.uid = $stateParams.uid;
+  }
+
+  if (!$rootScope.uid) {
+    $location.path('/condition1');
+  }
+
   $scope.start = function() {
-    $location.path('/condition1/1');
+    $http({
+      method: 'POST',
+      url: '/api/v1/condition1/row'
+    }).success(function(response) {
+      $rootScope.uid = response.data.uid;
+      $rootScope.number = response.data.number;
+      $location.path('/condition1/1');
+    })
   };
 
   $scope.goSecond = function() {
-    $location.path('/condition1/2');
+    $http({
+      method: 'POST',
+      url: '/api/v1/condition1/msip',
+      data: {
+        number: $rootScope.number,
+        answer: $scope.condition1MSIP
+      }
+    }).success(function(response) {
+      $location.path('/condition1/2');
+    });
   };
 
   $scope.goThird = function() {
-    $location.path('/condition1/3');
+    $http({
+      method: 'POST',
+      url: '/api/v1/condition1/sp',
+      data: {
+        number: $rootScope.number,
+        answer1: $scope.question1,
+        answer2: $scope.question2,
+        answer3: $scope.question3,
+        answer4: $scope.question4
+      }
+    }).success(function(response) {
+      $location.path('/condition1/3');
+    });
   };
 
   $scope.goBrainStorming = function() {
@@ -78,28 +114,39 @@ function Condition1($rootScope, $scope, $location, $window) {
   });
 
   $scope.ideaPools = [];
+  $scope.idea = '';
   $scope.submitIdea = function(idea) {
     $scope.ideaPools.unshift(idea);
     $scope.idea = '';
   };
 
   $scope.timerStart = function() {
-    $scope.$broadcast('timer-start');
+    if ($scope.idea.length === 0 && $scope.ideaPools.length === 0) {
+      $scope.$broadcast('timer-start');
+    }
   };
 
   $scope.$on('timer-tick', function(event, data) {
     if (data.millis == 0) {
-      var host = $location.host();
-      var protocal = $location.protocol()
-      var port = $location.port()
-      $scope.$broadcast('timer-stop');
-      $scope.timerRunning = false;
-      $window.location.href = protocal + "://" + host + ':' + port + "/condition1/final";
+      $http({
+        method: 'POST',
+        url: '/api/v1/condition1/igt',
+        data: {
+          number: $rootScope.number,
+          ideas: $scope.ideaPools
+        }
+      }).success(function(response) {
+        var host = $location.host();
+        var protocal = $location.protocol();
+        var port = $location.port();
+        $scope.$broadcast('timer-stop');
+        $window.location.href = protocal + "://" + host + ':' + port + "/condition1/final?uid=" + $rootScope.uid;
+      });
     }
   });
 }
 
-Condition1.$inject = ['$rootScope', '$scope', '$location', '$window'];
+Condition1.$inject = ['$rootScope', '$scope', '$location', '$window', '$http', '$stateParams'];
 
 function Condition2($rootScope, $scope) {}
 

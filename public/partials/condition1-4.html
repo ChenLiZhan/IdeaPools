@@ -31,12 +31,12 @@
     </p>
     <p class="topic">Topic: How a future supermarket may be like? What elements it may have?<span class="emphasize-text" style="float: right;"><timer autostart="false" countdown="600" max-time-unit="'minute'" interval="1000">{{mminutes}} : {{sseconds}}</timer></span></p>
   </div>
-  <textarea class="input-textarea" name="" id="" ng-model="idea" ng-keyup="timerStart()" autofocus></textarea>
+  <textarea class="input-textarea" name="" id="" ng-model="idea" ng-focus="timerStart()"></textarea>
   <button ng-click="submitIdea(idea)" style="margin-left: 48%;">SUBMIT IDEA</button>
   <div class="context">
     <p>
       <ul>
-        <li class="ideas" ng-repeat="idea in ideaPools"><span style="color: #758698;">{{ idea }}</span></li>
+        <li class="ideas" ng-repeat="idea in ideaPools track by $index"><span style="color: #758698;">{{ idea }}</span></li>
       </ul>
     </p>
   </div>
