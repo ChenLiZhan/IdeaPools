@@ -4,8 +4,8 @@ exports.index = function(req, res) {
   });
 };
 
-exports.condition1Intro = function(req, res) {
-  return res.render("condition1-intro", {
+exports.creativeIntro = function(req, res) {
+  return res.render("creative-intro", {
     title: "IdeaPool"
   });
 }

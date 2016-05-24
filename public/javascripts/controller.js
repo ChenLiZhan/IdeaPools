@@ -16,41 +16,41 @@ function Index($rootScope, $scope) {
 
 Index.$inject = ['$rootScope', '$scope'];
 
-function Condition1($rootScope, $scope, $location, $window, $http, $stateParams) {
-  if ($stateParams.uid && $location.path() === '/condition1/final') {
+function Creative($rootScope, $scope, $location, $window, $http, $stateParams) {
+  if ($stateParams.uid && $location.path() === '/creative/final') {
     $scope.uid = $stateParams.uid;
   } else if (!$rootScope.uid) {
-    $location.path('/condition1');
+    $location.path('/creative');
   }
 
   $scope.start = function() {
     $http({
       method: 'POST',
-      url: '/api/v1/condition1/row'
+      url: '/api/v1/creative/row'
     }).success(function(response) {
       $rootScope.uid = response.data.uid;
       $rootScope.number = response.data.number;
-      $location.path('/condition1/1');
+      $location.path('/creative/1');
     })
   };
 
   $scope.goSecond = function() {
     $http({
       method: 'POST',
-      url: '/api/v1/condition1/msip',
+      url: '/api/v1/creative/msip',
       data: {
         number: $rootScope.number,
-        answer: $scope.condition1MSIP
+        answer: $scope.creativeMSIP
       }
     }).success(function(response) {
-      $location.path('/condition1/2');
+      $location.path('/creative/2');
     });
   };
 
   $scope.goThird = function() {
     $http({
       method: 'POST',
-      url: '/api/v1/condition1/sp',
+      url: '/api/v1/creative/sp',
       data: {
         number: $rootScope.number,
         answer1: $scope.question1,
@@ -59,16 +59,16 @@ function Condition1($rootScope, $scope, $location, $window, $http, $stateParams)
         answer4: $scope.question4
       }
     }).success(function(response) {
-      $location.path('/condition1/3');
+      $location.path('/creative/3');
     });
   };
 
   $scope.goBrainStorming = function() {
-    $location.path('/condition1/4');
+    $location.path('/creative/4');
   };
 
   $scope.goFinal = function() {
-    $location.path('/condition1/final');
+    $location.path('/creative/final');
   };
 
   $scope.goForm = function() {
@@ -129,7 +129,7 @@ function Condition1($rootScope, $scope, $location, $window, $http, $stateParams)
     if (data.millis == 0) {
       $http({
         method: 'POST',
-        url: '/api/v1/condition1/igt',
+        url: '/api/v1/creative/igt',
         data: {
           number: $rootScope.number,
           ideas: $scope.ideaPools
@@ -139,13 +139,13 @@ function Condition1($rootScope, $scope, $location, $window, $http, $stateParams)
         var protocal = $location.protocol();
         var port = $location.port();
         $scope.$broadcast('timer-stop');
-        $window.location.href = protocal + "://" + host + ':' + port + "/condition1/final?uid=" + $rootScope.uid;
+        $window.location.href = protocal + "://" + host + ':' + port + "/creative/final?uid=" + $rootScope.uid;
       });
     }
   });
 }
 
-Condition1.$inject = ['$rootScope', '$scope', '$location', '$window', '$http', '$stateParams'];
+Creative.$inject = ['$rootScope', '$scope', '$location', '$window', '$http', '$stateParams'];
 
 function Condition2($rootScope, $scope) {}
 

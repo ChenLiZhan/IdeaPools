@@ -24,7 +24,7 @@ function getSheet(workSheetIndex, callback) {
   ]);
 }
 
-exports.createCondition1 = function(req, res) {
+exports.createCreative = function(req, res) {
   getSheet(0, function(sheet) {
     sheet.getRows(function(err, rows) {
       var rowNum = parseInt(rows.length) + 1;
@@ -49,7 +49,7 @@ exports.createCondition1 = function(req, res) {
   });
 };
 
-exports.updateCondition1MSIP = function(req, res) {
+exports.updateCreativeMSIP = function(req, res) {
   var number = req.body.number;
   var answer = req.body.answer;
   getSheet(0, function(sheet) {
@@ -64,7 +64,7 @@ exports.updateCondition1MSIP = function(req, res) {
   });
 };
 
-exports.updateCondition1SP = function(req, res) {
+exports.updateCreativeSP = function(req, res) {
   var number = req.body.number;
   var answer1 = req.body.answer1;
   var answer2 = req.body.answer2;
@@ -87,7 +87,7 @@ exports.updateCondition1SP = function(req, res) {
   });
 };
 
-exports.updateCondition1IGT = function(req, res) {
+exports.updateCreativeIGT = function(req, res) {
   var number = req.body.number;
   var answer = req.body.ideas;
 

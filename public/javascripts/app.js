@@ -10,35 +10,35 @@ app.config(['$stateProvider', '$urlRouterProvider', '$controllerProvider', '$loc
       template: 'partials/index.html',
       controller: 'Index'
     })
-    .state('condition1', {
-      url: '/condition1',
-      templateUrl: 'partials/condition1.html',
-      controller: 'Condition1'
+    .state('creative', {
+      url: '/creative',
+      templateUrl: 'partials/creative.html',
+      controller: 'Creative'
     })
-    .state('condition1-1', {
-      url: '/condition1/1',
-      templateUrl: 'partials/condition1-1.html',
-      controller: 'Condition1'
+    .state('creative-1', {
+      url: '/creative/1',
+      templateUrl: 'partials/creative-1.html',
+      controller: 'Creative'
     })
-    .state('condition1-2', {
-      url: '/condition1/2',
-      templateUrl: 'partials/condition1-2.html',
-      controller: 'Condition1'
+    .state('creative-2', {
+      url: '/creative/2',
+      templateUrl: 'partials/creative-2.html',
+      controller: 'Creative'
     })
-    .state('condition1-3', {
-      url: '/condition1/3',
-      templateUrl: 'partials/condition1-3.html',
-      controller: 'Condition1'
+    .state('creative-3', {
+      url: '/creative/3',
+      templateUrl: 'partials/creative-3.html',
+      controller: 'Creative'
     })
-    .state('condition1-4', {
-      url: '/condition1/4',
-      templateUrl: 'partials/condition1-4.html',
-      controller: 'Condition1'
+    .state('creative-4', {
+      url: '/creative/4',
+      templateUrl: 'partials/creative-4.html',
+      controller: 'Creative'
     })
-    .state('condition1-final', {
-      url: '/condition1/final?uid',
-      templateUrl: 'partials/condition1-final.html',
-      controller: 'Condition1'
+    .state('creative-final', {
+      url: '/creative/final?uid',
+      templateUrl: 'partials/creative-final.html',
+      controller: 'Creative'
     })
     .state('condition2', {
       url: '/condition2',
