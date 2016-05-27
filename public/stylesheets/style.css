@@ -3,6 +3,11 @@ html, div, header, body, footer, .header-container, .content-container, .footer-
   margin: 0;
 }
 
+/* Hide the content before loading complete */
+body {
+  visibility: hidden;
+}
+
 html, div, body {
   font: 14px "Calibri", Helvetica, Arial, sans-serif;
 }
