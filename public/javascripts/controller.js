@@ -30,7 +30,12 @@ function Creative($rootScope, $scope, $location, $window, $http, $stateParams) {
     }).success(function(response) {
       $rootScope.uid = response.data.uid;
       $rootScope.number = response.data.number;
-      $location.path('/creative/1');
+      $rootScope.timestamp = Date.now();
+      if ($rootScope.timestamp % 2 === 0) {
+        $location.path('/creative/1');
+      } else {
+        $location.path('/creative/2');
+      }
     })
   };
 
@@ -43,7 +48,11 @@ function Creative($rootScope, $scope, $location, $window, $http, $stateParams) {
         answer: $scope.creativeMSIP
       }
     }).success(function(response) {
-      $location.path('/creative/2');
+      if ($rootScope.timestamp % 2 === 0) {
+        $location.path('/creative/2');
+      } else {
+        $location.path('/creative/3');
+      }
     });
   };
 
@@ -59,7 +68,11 @@ function Creative($rootScope, $scope, $location, $window, $http, $stateParams) {
         answer4: $scope.question4
       }
     }).success(function(response) {
-      $location.path('/creative/3');
+      if ($rootScope.timestamp % 2 === 0) {
+        $location.path('/creative/3');
+      } else {
+        $location.path('/creative/1');
+      }
     });
   };
 
