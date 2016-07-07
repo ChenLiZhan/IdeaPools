@@ -10,18 +10,52 @@
   .circleBase {
     border-radius: 50%;
     text-align: center;
+    height: 100%;
+    /*position: relative;*/
   }
 
   .circleBase div {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    /*position: absolute;*/
+    /*min-width: 35vh;*/
+    /*top: 4.5vw;*/
+    /*left: -2vw;*/
   }
 
   .type3 {
-    width: 150px;
-    height: 150px;
+    width: 43vw;
+    height: 15vw;
     background: white;
     border: 3px solid #DCDCDC;
   }
+
+/*  .circle-text {
+      width: 25%;
+  }
+  .circle-text:after {
+      content: "";
+      display: block;
+      width: 100%;
+      height:0;
+      padding-bottom: 100%;
+      background: white; 
+      -moz-border-radius: 50%; 
+      -webkit-border-radius: 50%; 
+      border-radius: 50%;
+      border: 3px solid #DCDCDC;
+  }
+  .circle-text div {
+      float:left;
+      width:100%;
+      padding-top:37%;
+      margin-top:-0.5em;
+      text-align:center;
+  }*/
 </style>
 <div class="container">
   <div class="context">
@@ -38,37 +72,34 @@
     <div style="display: flex; flex-direction: row; justify-content: space-around;">
       <div class="circleBase type3">
         <div>
-          <br><br>
-          <span style="color:#1AADC3; font-size: 2.5vh;">Tip 1</span><br>
-          <span style="font-weight: bold; font-size: 3.5vh;">Quantity</span><br>
-          <span style="font-size: 2.5vh;">is wanted</span><br>
+          <span style="color:#1AADC3; font-size: 1.5vw;">Tip 1</span><br>
+          <span style="font-weight: bold; font-size: 2vw;">Quantity</span><br>
+          <span style="font-size: 1.5vw;">is wanted</span><br>
         </div>
       </div>
       <div class="circleBase type3">
         <div>
-          <br><br>
-          <span style="color:#1AADC3; font-size: 2.5vh;">Tip 2</span><br>
-          <span style="font-weight: bold; font-size: 3.5vh;">Wild Ideas</span><br>
-          <span style="font-size: 2.5vh;">are welcomed</span><br>
+          <span style="color:#1AADC3; font-size: 1.5vw;">Tip 2</span><br>
+          <span style="font-weight: bold; font-size: 2vw;">Wild Ideas</span><br>
+          <span style="font-size: 1.5vw;">are welcomed</span><br>
         </div>
       </div>
       <div class="circleBase type3">
         <div>
-          <br><br>
-          <span style="color:#1AADC3; font-size: 2.5vh;">Tip 3</span><br>
-          <span style="font-weight: bold; font-size: 3.5vh;">Combine</span><br>
-          <span style="font-size: 2.5vh;">ideas</span><br>
+          <span style="color:#1AADC3; font-size: 1.5vw;">Tip 3</span><br>
+          <span style="font-weight: bold; font-size: 2vw;">Combine</span><br>
+          <span style="font-size: 1.5vw;">ideas</span><br>
         </div>
       </div>
       <div class="circleBase type3">
         <div>
-          <br><br>
-          <span style="color:#1AADC3; font-size: 2.5vh;">Tip 4</span><br>
-          <span style="font-size: 2.5vh;">Criticism is</span><br>
-          <span style="font-weight: bold; font-size: 3.5vh;">Ruled Out</span><br>
+          <span style="color:#1AADC3; font-size: 1.5vw;">Tip 4</span><br>
+          <span style="font-size: 1.5vw;">Criticism is</span><br>
+          <span style="font-weight: bold; font-size: 2vw;">Ruled Out</span><br>
         </div>
       </div>
     </div>
   </div>
+  <br><br>
   <button ng-click="goBrainStorming()">START</button>
 </div>
