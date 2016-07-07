@@ -198,7 +198,7 @@ function Original($rootScope, $scope, $location, $window, $http, $stateParams) {
       $rootScope.number = response.data.number;
       $rootScope.timestamp = Date.now();
 
-      var json = 'http://ipv4.myexternalip.com/json';
+      var json = 'https://ipv4.myexternalip.com/json';
       $http({
         method: 'GET',
         url: json
@@ -364,7 +364,7 @@ function Creativity($rootScope, $scope, $location, $window, $http, $stateParams)
       $rootScope.number = response.data.number;
       $rootScope.timestamp = Date.now();
 
-      var json = 'http://ipv4.myexternalip.com/json';
+      var json = 'https://ipv4.myexternalip.com/json';
       $http({
         method: 'GET',
         url: json
@@ -525,7 +525,7 @@ function Originality($rootScope, $scope, $location, $window, $http, $stateParams
       $rootScope.number = response.data.number;
       $rootScope.timestamp = Date.now();
 
-      var json = 'http://ipv4.myexternalip.com/json';
+      var json = 'https://ipv4.myexternalip.com/json';
       $http({
         method: 'GET',
         url: json
