@@ -32,12 +32,11 @@ function Creative($rootScope, $scope, $location, $window, $http, $stateParams) {
       $rootScope.number = response.data.number;
       $rootScope.timestamp = Date.now();
 
-      var json = 'http://ipv4.myexternalip.com/json';
+      var json = 'https://ipv4.myexternalip.com/json';
       $http({
         method: 'GET',
         url: json
       }).success(function(result) {
-        console.log(result.ip);
         $rootScope.userIP = result.ip
       });
 
