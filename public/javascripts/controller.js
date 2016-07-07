@@ -37,6 +37,7 @@ function Creative($rootScope, $scope, $location, $window, $http, $stateParams) {
         method: 'GET',
         url: json
       }).success(function(result) {
+        console.log(result.ip);
         $rootScope.userIP = result.ip
       });
 
