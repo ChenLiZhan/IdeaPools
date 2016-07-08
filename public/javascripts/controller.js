@@ -96,10 +96,6 @@ function Creative($rootScope, $scope, $location, $window, $http, $stateParams) {
     $location.path('/creative/final');
   };
 
-  $scope.goForm = function() {
-    $window.location.href = 'http://google.com'
-  };
-
   var question_sets = [
     [
       "Which supermarket(s) do you usually go to? Why? How do you go to the supermarket?",
@@ -260,10 +256,6 @@ function Original($rootScope, $scope, $location, $window, $http, $stateParams) {
 
   $scope.goFinal = function() {
     $location.path('/original/final');
-  };
-
-  $scope.goForm = function() {
-    $window.location.href = 'http://google.com'
   };
 
   var question_sets = [
@@ -428,10 +420,6 @@ function Creativity($rootScope, $scope, $location, $window, $http, $stateParams)
     $location.path('/creativity/final');
   };
 
-  $scope.goForm = function() {
-    $window.location.href = 'http://google.com'
-  };
-
   var question_sets = [
     [
       "How much time and attention do you usually devote to sports? Please provide some examples of your behavior.",
@@ -587,10 +575,6 @@ function Originality($rootScope, $scope, $location, $window, $http, $stateParams
 
   $scope.goFinal = function() {
     $location.path('/originality/final');
-  };
-
-  $scope.goForm = function() {
-    $window.location.href = 'http://google.com'
   };
 
   var question_sets = [
