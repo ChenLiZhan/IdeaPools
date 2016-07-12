@@ -202,11 +202,11 @@ function Original($rootScope, $scope, $location, $window, $http, $stateParams) {
         $rootScope.userIP = result.ip
       });
 
-      if ($rootScope.timestamp % 2 === 0) {
-        $location.path('/original/1');
-      } else {
-        $location.path('/original/2');
-      }
+      // if ($rootScope.timestamp % 2 === 0) {
+      $location.path('/original/1');
+      // } else {
+      // $location.path('/original/2');
+      // }
     })
   };
 
@@ -219,11 +219,11 @@ function Original($rootScope, $scope, $location, $window, $http, $stateParams) {
         answer: $scope.originalMSIP
       }
     }).success(function(response) {
-      if ($rootScope.timestamp % 2 === 0) {
-        $location.path('/original/2');
-      } else {
-        $location.path('/original/mid');
-      }
+      // if ($rootScope.timestamp % 2 === 0) {
+      $location.path('/original/2');
+      // } else {
+      // $location.path('/original/mid');
+      // }
     });
   };
 
@@ -238,11 +238,11 @@ function Original($rootScope, $scope, $location, $window, $http, $stateParams) {
         answer3: $scope.question3
       }
     }).success(function(response) {
-      if ($rootScope.timestamp % 2 === 0) {
-        $location.path('/original/mid');
-      } else {
-        $location.path('/original/1');
-      }
+      // if ($rootScope.timestamp % 2 === 0) {
+      $location.path('/original/mid');
+      // } else {
+      // $location.path('/original/1');
+      // }
     });
   };
 
@@ -364,11 +364,11 @@ function Creativity($rootScope, $scope, $location, $window, $http, $stateParams)
         $rootScope.userIP = result.ip
       });
 
-      if ($rootScope.timestamp % 2 === 0) {
-        $location.path('/creativity/1');
-      } else {
-        $location.path('/creativity/2');
-      }
+      // if ($rootScope.timestamp % 2 === 0) {
+      // $location.path('/creativity/1');
+      // } else {
+      $location.path('/creativity/2');
+      // }
     })
   };
 
@@ -381,11 +381,11 @@ function Creativity($rootScope, $scope, $location, $window, $http, $stateParams)
         answer: $scope.creativityMSIP
       }
     }).success(function(response) {
-      if ($rootScope.timestamp % 2 === 0) {
-        $location.path('/creativity/2');
-      } else {
-        $location.path('/creativity/mid');
-      }
+      // if ($rootScope.timestamp % 2 === 0) {
+      // $location.path('/creativity/2');
+      // } else {
+      $location.path('/creativity/mid');
+      // }
     });
   };
 
@@ -400,11 +400,11 @@ function Creativity($rootScope, $scope, $location, $window, $http, $stateParams)
         answer3: $scope.question3
       }
     }).success(function(response) {
-      if ($rootScope.timestamp % 2 === 0) {
-        $location.path('/creativity/mid');
-      } else {
-        $location.path('/creativity/1');
-      }
+      // if ($rootScope.timestamp % 2 === 0) {
+      // $location.path('/creativity/mid');
+      // } else {
+      $location.path('/creativity/1');
+      // }
     });
   };
 
