@@ -73,7 +73,9 @@ function Creative($rootScope, $scope, $location, $window, $http, $stateParams) {
         number: $rootScope.number,
         answer1: $scope.question1,
         answer2: $scope.question2,
-        answer3: $scope.question3
+        answer3: $scope.question3,
+        spSelect1: $scope.spClicker1Value,
+        spSelect2: $scope.spClicker2Value
       }
     }).success(function(response) {
       if ($rootScope.timestamp % 2 === 0) {
@@ -108,8 +110,30 @@ function Creative($rootScope, $scope, $location, $window, $http, $stateParams) {
       "How do you shop and find the products in the supermarket(s) that you shop frequently? Please elaborate and provide some examples."
     ]
   ]
+
+  var selectText = [
+    ['Overall, you think the supermarket(s) you usually visit is:', 'Inconvenient', 'Convenient', 'Distressing', 'Relaxing'],
+    ['Overall, you think the products in the supermarket(s) you usually visit are', 'Low Quality', 'High Quality', 'Lack of choices', 'Plenty of choices']
+  ]
   var randomSeed = Math.floor((Math.random() * 2) + 1);
   $scope.questions = question_sets[randomSeed - 1];
+  $scope.selectWords = selectText[randomSeed - 1];
+
+  $scope.spClicker1Ary = [false, false, false, false, false, false];
+  $scope.spClicker1Value = 0;
+  $scope.spClicker1 = function(value) {
+    $scope.spClicker1Ary = [false, false, false, false, false, false];
+    $scope.spClicker1Value = value;
+    $scope.spClicker1Ary[value - 1] = true;
+  };
+
+  $scope.spClicker2Ary = [false, false, false, false, false, false];
+  $scope.spClicker2Value = 0;
+  $scope.spClicker2 = function(value) {
+    $scope.spClicker2Ary = [false, false, false, false, false, false];
+    $scope.spClicker2Value = value;
+    $scope.spClicker2Ary[value - 1] = true;
+  };
 
   $scope.$watch('question1', function(newVal, oldVal) {
     var wordLimit = 200;
@@ -235,7 +259,9 @@ function Original($rootScope, $scope, $location, $window, $http, $stateParams) {
         number: $rootScope.number,
         answer1: $scope.question1,
         answer2: $scope.question2,
-        answer3: $scope.question3
+        answer3: $scope.question3,
+        spSelect1: $scope.spClicker1Value,
+        spSelect2: $scope.spClicker2Value
       }
     }).success(function(response) {
       // if ($rootScope.timestamp % 2 === 0) {
@@ -270,8 +296,30 @@ function Original($rootScope, $scope, $location, $window, $http, $stateParams) {
       "How do you shop and find the products in the supermarket(s) that you shop frequently? Please elaborate and provide some examples."
     ]
   ]
+
+  var selectText = [
+    ['Overall, you think the supermarket(s) you usually visit is:', 'Inconvenient', 'Convenient', 'Distressing', 'Relaxing'],
+    ['Overall, you think the products in the supermarket(s) you usually visit are', 'Low Quality', 'High Quality', 'Lack of choices', 'Plenty of choices']
+  ]
   var randomSeed = Math.floor((Math.random() * 2) + 1);
   $scope.questions = question_sets[randomSeed - 1];
+  $scope.selectWords = selectText[randomSeed - 1];
+
+  $scope.spClicker1Ary = [false, false, false, false, false, false];
+  $scope.spClicker1Value = 0;
+  $scope.spClicker1 = function(value) {
+    $scope.spClicker1Ary = [false, false, false, false, false, false];
+    $scope.spClicker1Value = value;
+    $scope.spClicker1Ary[value - 1] = true;
+  };
+
+  $scope.spClicker2Ary = [false, false, false, false, false, false];
+  $scope.spClicker2Value = 0;
+  $scope.spClicker2 = function(value) {
+    $scope.spClicker2Ary = [false, false, false, false, false, false];
+    $scope.spClicker2Value = value;
+    $scope.spClicker2Ary[value - 1] = true;
+  };
 
   $scope.$watch('question1', function(newVal, oldVal) {
     var wordLimit = 200;
@@ -397,7 +445,9 @@ function Creativity($rootScope, $scope, $location, $window, $http, $stateParams)
         number: $rootScope.number,
         answer1: $scope.question1,
         answer2: $scope.question2,
-        answer3: $scope.question3
+        answer3: $scope.question3,
+        spSelect1: $scope.spClicker1Value,
+        spSelect2: $scope.spClicker2Value
       }
     }).success(function(response) {
       // if ($rootScope.timestamp % 2 === 0) {
@@ -418,6 +468,22 @@ function Creativity($rootScope, $scope, $location, $window, $http, $stateParams)
 
   $scope.goFinal = function() {
     $location.path('/creativity/final');
+  };
+
+  $scope.spClicker1Ary = [false, false, false, false, false, false];
+  $scope.spClicker1Value = 0;
+  $scope.spClicker1 = function(value) {
+    $scope.spClicker1Ary = [false, false, false, false, false, false];
+    $scope.spClicker1Value = value;
+    $scope.spClicker1Ary[value - 1] = true;
+  };
+
+  $scope.spClicker2Ary = [false, false, false, false, false, false];
+  $scope.spClicker2Value = 0;
+  $scope.spClicker2 = function(value) {
+    $scope.spClicker2Ary = [false, false, false, false, false, false];
+    $scope.spClicker2Value = value;
+    $scope.spClicker2Ary[value - 1] = true;
   };
 
   var question_sets = [
@@ -554,7 +620,9 @@ function Originality($rootScope, $scope, $location, $window, $http, $stateParams
         number: $rootScope.number,
         answer1: $scope.question1,
         answer2: $scope.question2,
-        answer3: $scope.question3
+        answer3: $scope.question3,
+        spSelect1: $scope.spClicker1Value,
+        spSelect2: $scope.spClicker2Value
       }
     }).success(function(response) {
       if ($rootScope.timestamp % 2 === 0) {
@@ -575,6 +643,22 @@ function Originality($rootScope, $scope, $location, $window, $http, $stateParams
 
   $scope.goFinal = function() {
     $location.path('/originality/final');
+  };
+
+  $scope.spClicker1Ary = [false, false, false, false, false, false];
+  $scope.spClicker1Value = 0;
+  $scope.spClicker1 = function(value) {
+    $scope.spClicker1Ary = [false, false, false, false, false, false];
+    $scope.spClicker1Value = value;
+    $scope.spClicker1Ary[value - 1] = true;
+  };
+
+  $scope.spClicker2Ary = [false, false, false, false, false, false];
+  $scope.spClicker2Value = 0;
+  $scope.spClicker2 = function(value) {
+    $scope.spClicker2Ary = [false, false, false, false, false, false];
+    $scope.spClicker2Value = value;
+    $scope.spClicker2Ary[value - 1] = true;
   };
 
   var question_sets = [

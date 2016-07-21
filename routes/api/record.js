@@ -35,6 +35,8 @@ exports.createCreative = function(req, res) {
         sp1: '',
         sp2: '',
         sp3: '',
+        spSelect1: '',
+        spSelect2: '',
         igt: '',
         time: '',
         ip: ''
@@ -70,12 +72,16 @@ exports.updateCreativeSP = function(req, res) {
   var answer1 = req.body.answer1;
   var answer2 = req.body.answer2;
   var answer3 = req.body.answer3;
+  var spSelect1 = req.body.spSelect1;
+  var spSelect2 = req.body.spSelect2;
 
   getSheet(0, function(sheet) {
     sheet.getRows(function(err, rows) {
       rows[number - 1].sp1 = answer1;
       rows[number - 1].sp2 = answer2;
       rows[number - 1].sp3 = answer3;
+      rows[number - 1].spSelect1 = spSelect1;
+      rows[number - 1].spSelect2 = spSelect2;
 
       rows[number - 1].save(function() {
         return res.json({
@@ -118,6 +124,8 @@ exports.createOriginal = function(req, res) {
         sp1: '',
         sp2: '',
         sp3: '',
+        spSelect1: '',
+        spSelect2: '',
         igt: '',
         time: '',
         ip: ''
@@ -153,12 +161,16 @@ exports.updateOriginalSP = function(req, res) {
   var answer1 = req.body.answer1;
   var answer2 = req.body.answer2;
   var answer3 = req.body.answer3;
+  var spSelect1 = req.body.spSelect1;
+  var spSelect2 = req.body.spSelect2;
 
   getSheet(0, function(sheet) {
     sheet.getRows(function(err, rows) {
       rows[number - 1].sp1 = answer1;
       rows[number - 1].sp2 = answer2;
       rows[number - 1].sp3 = answer3;
+      rows[number - 1].spSelect1 = spSelect1;
+      rows[number - 1].spSelect2 = spSelect2;
 
       rows[number - 1].save(function() {
         return res.json({
@@ -201,6 +213,8 @@ exports.createCreativity = function(req, res) {
         sp1: '',
         sp2: '',
         sp3: '',
+        spSelect1: '',
+        spSelect2: '',
         igt: '',
         time: '',
         ip: ''
@@ -236,12 +250,16 @@ exports.updateCreativitySP = function(req, res) {
   var answer1 = req.body.answer1;
   var answer2 = req.body.answer2;
   var answer3 = req.body.answer3;
+  var spSelect1 = req.body.spSelect1;
+  var spSelect2 = req.body.spSelect2;
 
   getSheet(0, function(sheet) {
     sheet.getRows(function(err, rows) {
       rows[number - 1].sp1 = answer1;
       rows[number - 1].sp2 = answer2;
       rows[number - 1].sp3 = answer3;
+      rows[number - 1].spSelect1 = spSelect1;
+      rows[number - 1].spSelect2 = spSelect2;
 
       rows[number - 1].save(function() {
         return res.json({
@@ -283,6 +301,8 @@ exports.createOriginality = function(req, res) {
         sp1: '',
         sp2: '',
         sp3: '',
+        spSelect1: '',
+        spSelect2: '',
         igt: '',
         time: '',
         ip: ''
@@ -318,12 +338,16 @@ exports.updateOriginalitySP = function(req, res) {
   var answer1 = req.body.answer1;
   var answer2 = req.body.answer2;
   var answer3 = req.body.answer3;
+  var spSelect1 = req.body.spSelect1;
+  var spSelect2 = req.body.spSelect2;
 
   getSheet(0, function(sheet) {
     sheet.getRows(function(err, rows) {
       rows[number - 1].sp1 = answer1;
       rows[number - 1].sp2 = answer2;
       rows[number - 1].sp3 = answer3;
+      rows[number - 1].spSelect1 = spSelect1;
+      rows[number - 1].spSelect2 = spSelect2;
 
       rows[number - 1].save(function() {
         return res.json({

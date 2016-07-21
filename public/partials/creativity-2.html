@@ -14,6 +14,41 @@
   .input-textarea {
     height: 300px;
   }
+
+  .circleBase {
+    border-radius: 50%;
+    text-align: center;
+    height: 100%;
+    /*position: relative;*/
+  }
+
+  .circleBase div {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    /*position: absolute;*/
+    /*min-width: 35vh;*/
+    /*top: 4.5vw;*/
+    /*left: -2vw;*/
+  }
+
+  .type3 {
+    width: 1.5vw;
+    height: 1.5vw;
+    background: #F4F4F4;
+    border: 3px solid #758698;
+  }
+
+  .type4 {
+    width: 1.5vw;
+    height: 1.5vw;
+    background: #000000;
+    border: 3px solid #758698;
+  }
+
 </style>
 <div class="container">
   <div class="context">
@@ -31,5 +66,30 @@
     <span>3. {{ questions[2] }}</span>
   </div>
   <textarea class="input-textarea" name="" id="" ng-model="question3"></textarea>
+  <br>
+  <div class="context">
+    <p>Overall, you think the sport is:</p>
+    <div style="display: flex; flex-direction: row; justify-content: space-around;">
+      <div style="flex-grow: 0; width: 20%"><p style="font-size: 2.5vh; margin-top: 0px;">Boring</p></div>
+      <div ng-click="spClicker1(1)" class="circleBase {{ !spClicker1Ary[0] ? 'type3' : 'type4' }}" style="flex-grow: 0; cursor: pointer; cursor: hand;"></div>
+      <div ng-click="spClicker1(2)" class="circleBase {{ !spClicker1Ary[1] ? 'type3' : 'type4' }}" style="flex-grow: 0; cursor: pointer; cursor: hand;"></div>
+      <div ng-click="spClicker1(3)" class="circleBase {{ !spClicker1Ary[2] ? 'type3' : 'type4' }}" style="flex-grow: 0; cursor: pointer; cursor: hand;"></div>
+      <div ng-click="spClicker1(4)" class="circleBase {{ !spClicker1Ary[3] ? 'type3' : 'type4' }}" style="flex-grow: 0; cursor: pointer; cursor: hand;"></div>
+      <div ng-click="spClicker1(5)" class="circleBase {{ !spClicker1Ary[4] ? 'type3' : 'type4' }}" style="flex-grow: 0; cursor: pointer; cursor: hand;"></div>
+      <div ng-click="spClicker1(6)" class="circleBase {{ !spClicker1Ary[5] ? 'type3' : 'type4' }}" style="flex-grow: 0; cursor: pointer; cursor: hand;"></div>
+      <div style="flex-grow: 0; width: 20%"><p style="font-size: 2.5vh; margin-top: 0px;">Exciting</p></div>
+    </div>
+    <br>
+    <div style="display: flex; flex-direction: row; justify-content: space-around;">
+      <div style="flex-grow: 0; width: 20%"><p style="font-size: 2.5vh; margin-top: 0px;">Not at all time consuming</p></div>
+      <div ng-click="spClicker2(1)" class="circleBase {{ !spClicker2Ary[0] ? 'type3' : 'type4' }}" style="flex-grow: 0; cursor: pointer; cursor: hand;"></div>
+      <div ng-click="spClicker2(2)" class="circleBase {{ !spClicker2Ary[1] ? 'type3' : 'type4' }}" style="flex-grow: 0; cursor: pointer; cursor: hand;"></div>
+      <div ng-click="spClicker2(3)" class="circleBase {{ !spClicker2Ary[2] ? 'type3' : 'type4' }}" style="flex-grow: 0; cursor: pointer; cursor: hand;"></div>
+      <div ng-click="spClicker2(4)" class="circleBase {{ !spClicker2Ary[3] ? 'type3' : 'type4' }}" style="flex-grow: 0; cursor: pointer; cursor: hand;"></div>
+      <div ng-click="spClicker2(5)" class="circleBase {{ !spClicker2Ary[4] ? 'type3' : 'type4' }}" style="flex-grow: 0; cursor: pointer; cursor: hand;"></div>
+      <div ng-click="spClicker2(6)" class="circleBase {{ !spClicker2Ary[5] ? 'type3' : 'type4' }}" style="flex-grow: 0; cursor: pointer; cursor: hand;"></div>
+      <div style="flex-grow: 0; width: 20%"><p style="font-size: 2.5vh; margin-top: 0px;">Very time consuming</p></div>
+    </div>
+  </div>
   <button ng-click="goThird()">SUBMIT</button>
 </div>
