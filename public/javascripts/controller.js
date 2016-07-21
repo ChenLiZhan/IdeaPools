@@ -98,14 +98,14 @@ function Creative($rootScope, $scope, $location, $window, $http, $stateParams) {
 
   var question_sets = [
     [
-      "Which supermarket(s) do you usually go to? Why? How do you go to the supermarket?",
-      "Following the previous question, what's your traffic flow in supermarkets generally?",
-      "Do  you like the current layout, shelves and other equipment of that supermarket? Do they help you find your products faster, or make your shopping experience better? Please elaborate."
+      "In the supermarket(s) that you usually shop, which area(s) do you like or dislike the most? Please elaborate.",
+      "Following the above question, which area(s) are the ones that you tend to spend more time in? Please elaborate.",
+      "How do you like the layout, shelves and other equipment of the supermarket that you shop most frequently?  Please elaborate and provide some examples."
     ],
     [
-      "Which supermarket(s) do you usually go to? What kinds of product does it sell?",
-      "Following the previous question, how do you make decisions when selecting the same products among different brands? What product information does the supermarket provide? Is the information enough for you or for your selection process?",
-      "How do you find the products you want in that supermarket? If you go to a new supermarket one day, what will you do to find the products?"
+      "In the supermarket(s) that you usually shop, what products do you usually get in your routine grocery shopping?",
+      "How do you make decisions when selecting the products among different brands? Please elaborate and provide some examples.",
+      "How do you shop and find the products in the supermarket(s) that you shop frequently? Please elaborate and provide some examples."
     ]
   ]
   var randomSeed = Math.floor((Math.random() * 2) + 1);
@@ -260,14 +260,14 @@ function Original($rootScope, $scope, $location, $window, $http, $stateParams) {
 
   var question_sets = [
     [
-      "Which supermarket(s) do you usually go to? Why? How do you go to the supermarket?",
-      "Following the previous question, what's your traffic flow in supermarkets generally?",
-      "Do you like the current layout, shelves and other equipment of that supermarket? Do they help you find your products faster, or make your shopping experience better? Please elaborate."
+      "In the supermarket(s) that you usually shop, which area(s) do you like or dislike the most? Please elaborate.",
+      "Following the above question, which area(s) are the ones that you tend to spend more time in? Please elaborate.",
+      "How do you like the layout, shelves and other equipment of the supermarket that you shop most frequently?  Please elaborate and provide some examples."
     ],
     [
-      "Which supermarket(s) do you usually go to? What kinds of product does it sell?",
-      "Following the previous question, how do you make decisions when selecting the same products among different brands? What product information does the supermarket provide? Is the information enough for you or for your selection process?",
-      "How do you find the products you want in that supermarket? If you go to a new supermarket one day, what will you do to find the products?"
+      "In the supermarket(s) that you usually shop, what products do you usually get in your routine grocery shopping?",
+      "How do you make decisions when selecting the products among different brands? Please elaborate and provide some examples.",
+      "How do you shop and find the products in the supermarket(s) that you shop frequently? Please elaborate and provide some examples."
     ]
   ]
   var randomSeed = Math.floor((Math.random() * 2) + 1);
@@ -422,9 +422,9 @@ function Creativity($rootScope, $scope, $location, $window, $http, $stateParams)
 
   var question_sets = [
     [
-      "How much time and attention do you usually devote to sports? Please provide some examples of your behavior.",
-      "Do you usually devote more or less time to sports than other people? Please provide some examples of why you think this is the case.",
-      "Do you think you ought to devote more time and attention to sports? Please provide some examples of why you think this is the case."
+      "What is your favorite sport (workout)? Please explain why you think so.",
+      "How much time and attention do you usually devote to your favorite sports (workout)? Please provide some examples of your behavior.",
+      "How important do you think it is for people to devote time and energy to sports (workout)? Please explain why you think so."
     ]
   ]
 
@@ -579,9 +579,9 @@ function Originality($rootScope, $scope, $location, $window, $http, $stateParams
 
   var question_sets = [
     [
-      "How much time and attention do you usually devote to sports? Please provide some examples of your behavior.",
-      "Do you usually devote more or less time to sports than other people? Please provide some examples of why you think this is the case.",
-      "Do you think you ought to devote more time and attention to sports? Please provide some examples of why you think this is the case."
+      "What is your favorite sport (workout)? Please explain why you think so.",
+      "How much time and attention do you usually devote to your favorite sports (workout)? Please provide some examples of your behavior.",
+      "How important do you think it is for people to devote time and energy to sports (workout)? Please explain why you think so."
     ]
   ]
 
